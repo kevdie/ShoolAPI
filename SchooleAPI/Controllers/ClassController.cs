@@ -8,7 +8,7 @@ namespace SchooleAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ValuesController : ControllerBase
+    public class ClassController : ControllerBase
     {
         // GET api/values
         [HttpGet]

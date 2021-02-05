@@ -1,0 +1,16 @@
+D:\Documents\AppPasantiaTest\SchooleAPI\SchooleAPI\bin\Debug\netcoreapp2.2\appsettings.Development.json
+D:\Documents\AppPasantiaTest\SchooleAPI\SchooleAPI\bin\Debug\netcoreapp2.2\appsettings.json
+D:\Documents\AppPasantiaTest\SchooleAPI\SchooleAPI\bin\Debug\netcoreapp2.2\Properties\launchSettings.json
+D:\Documents\AppPasantiaTest\SchooleAPI\SchooleAPI\bin\Debug\netcoreapp2.2\SchooleAPI.deps.json
+D:\Documents\AppPasantiaTest\SchooleAPI\SchooleAPI\bin\Debug\netcoreapp2.2\SchooleAPI.runtimeconfig.json
+D:\Documents\AppPasantiaTest\SchooleAPI\SchooleAPI\bin\Debug\netcoreapp2.2\SchooleAPI.runtimeconfig.dev.json
+D:\Documents\AppPasantiaTest\SchooleAPI\SchooleAPI\bin\Debug\netcoreapp2.2\SchooleAPI.dll
+D:\Documents\AppPasantiaTest\SchooleAPI\SchooleAPI\bin\Debug\netcoreapp2.2\SchooleAPI.pdb
+D:\Documents\AppPasantiaTest\SchooleAPI\SchooleAPI\obj\Debug\netcoreapp2.2\SchooleAPI.csprojAssemblyReference.cache
+D:\Documents\AppPasantiaTest\SchooleAPI\SchooleAPI\obj\Debug\netcoreapp2.2\SchooleAPI.RazorAssemblyInfo.cache
+D:\Documents\AppPasantiaTest\SchooleAPI\SchooleAPI\obj\Debug\netcoreapp2.2\SchooleAPI.RazorAssemblyInfo.cs
+D:\Documents\AppPasantiaTest\SchooleAPI\SchooleAPI\obj\Debug\netcoreapp2.2\SchooleAPI.AssemblyInfoInputs.cache
+D:\Documents\AppPasantiaTest\SchooleAPI\SchooleAPI\obj\Debug\netcoreapp2.2\SchooleAPI.AssemblyInfo.cs
+D:\Documents\AppPasantiaTest\SchooleAPI\SchooleAPI\obj\Debug\netcoreapp2.2\SchooleAPI.RazorTargetAssemblyInfo.cache
+D:\Documents\AppPasantiaTest\SchooleAPI\SchooleAPI\obj\Debug\netcoreapp2.2\SchooleAPI.dll
+D:\Documents\AppPasantiaTest\SchooleAPI\SchooleAPI\obj\Debug\netcoreapp2.2\SchooleAPI.pdb
