@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using SchooleAPI.Models;
+using SchooleAPI.Repository;
 
 namespace SchooleAPI.Controllers
 {
@@ -10,36 +12,50 @@ namespace SchooleAPI.Controllers
     [ApiController]
     public class StudentController : ControllerBase
     {
-        // GET api/values
-        [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        private IRepositorySchool repository;
+
+        public StudentController(IRepositorySchool repository)
         {
-            return new string[] { "value1", "value2" };
+            this.repository= repository;
+        }
+        // GET api/Students
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Student>>> GetStudents()
+        {
+            var students = await repository.GetStudentsAsync();
+            return Ok(students);
         }
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
+        public async Task<ActionResult<Student>> GetStudent(int id )
         {
-            return "value";
+            var students = await repository.GetStudentAsync(id);
+            return Ok(students);
         }
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody] string value)
+        public async Task<ActionResult<Student>> PostStudent([FromBody] Student student)
         {
+            var students= await repository.CreateStudentAsync(student);
+            return Ok(students); 
+
         }
 
         // PUT api/values/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public async Task<ActionResult<Student>> PutStudent(int id, [FromBody] Student student)
         {
+           return Ok( await repository.UpdateStudentAsync(id,student));
+             
         }
 
         // DELETE api/values/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public void DeleteStudent(int id)
         {
+            repository.DeleteStudentAsync(id);
         }
     }
 }

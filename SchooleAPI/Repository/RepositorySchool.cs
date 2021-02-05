@@ -23,14 +23,17 @@ namespace SchooleAPI.Repository
         {
             return await Task.FromResult((students.Find(x => x.IdStudent == id)).classes);
         }
-        public void CreateStudentAsync(Student student)
+        public async Task<Student> CreateStudentAsync(Student student)
         {
             students.Add(student);
+            return await Task.FromResult(student);
         }
-        public void UpdateStudentAsync(Student student)
+        public async Task<Student> UpdateStudentAsync(int id, Student student)
         {
-            students.RemoveAll(x => x.IdStudent == student.IdStudent);
-            students.Add(student);
+            var stud=students.FirstOrDefault(x => x.IdStudent == id);
+            stud.FirstName = student.FirstName ?? stud.FirstName;
+            stud.LastName = student.LastName ?? stud.LastName;
+            return await Task.FromResult(stud);
 
         }
         public void DeleteStudentAsync(int id)
