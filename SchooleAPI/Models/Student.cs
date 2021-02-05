@@ -14,7 +14,7 @@ namespace SchooleAPI.Models
         [Required]
         public string LastName { get; set; }
         
-        public IEnumerable<Class> classes { get; set; }
+        public List<Class> classes { get; set; }
 
     }
 }
