@@ -18,8 +18,8 @@ namespace SchooleAPI.Repository
         Task<IEnumerable<Class>> GetClassesAsync();
         Task<Class> GetClassAsync(int id);
         Task <IEnumerable<Student>> GetStudentOfClass(int id);
-        void CreateClassAsync(Class clas);
-        void UpdateClassAsync(Class clas);
+        Task<Class> CreateClassAsync(Class clas);
+        Task<Class> UpdateClassAsync(int id, Class clas);
         void DeleteClassAsync(int id);
     }
 }

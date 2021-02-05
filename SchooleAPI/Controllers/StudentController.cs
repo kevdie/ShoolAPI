@@ -26,7 +26,7 @@ namespace SchooleAPI.Controllers
             return Ok(students);
         }
 
-        // GET api/values/5
+        // GET api/Students/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Student>> GetStudent(int id )
         {
@@ -34,7 +34,7 @@ namespace SchooleAPI.Controllers
             return Ok(students);
         }
 
-        // POST api/values
+        // POST api/Student
         [HttpPost]
         public async Task<ActionResult<Student>> PostStudent([FromBody] Student student)
         {
@@ -43,7 +43,7 @@ namespace SchooleAPI.Controllers
 
         }
 
-        // PUT api/values/5
+        // PUT api/Student/5
         [HttpPut("{id}")]
         public async Task<ActionResult<Student>> PutStudent(int id, [FromBody] Student student)
         {
@@ -51,7 +51,7 @@ namespace SchooleAPI.Controllers
              
         }
 
-        // DELETE api/values/5
+        // DELETE api/Student/5
         [HttpDelete("{id}")]
         public void DeleteStudent(int id)
         {
