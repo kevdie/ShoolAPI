@@ -13,7 +13,7 @@ namespace SchooleAPI.Repository
         Task<IEnumerable<Class>> GetClassOfStudentAsync(int id);
         Task<Student> CreateStudentAsync(Student student);
         Task<Student> UpdateStudentAsync(int id, Student student);
-        void DeleteStudentAsync(int id);
+        Task<Student> DeleteStudentAsync(int id);
 
         Task<IEnumerable<Class>> GetClassesAsync();
         Task<Class> GetClassAsync(int id);

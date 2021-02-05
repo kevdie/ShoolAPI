@@ -36,9 +36,11 @@ namespace SchooleAPI.Repository
             return await Task.FromResult(stud);
 
         }
-        public void DeleteStudentAsync(int id)
+        public async Task<Student> DeleteStudentAsync(int id)
         {
+            var stud =  students.FirstOrDefault(x => x.IdStudent == id);
             students.RemoveAll(x => x.IdStudent == id);
+            return await Task.FromResult(stud);
         }
 
         public async Task<IEnumerable<Class>> GetClassesAsync()
@@ -54,14 +56,18 @@ namespace SchooleAPI.Repository
         {
             return await Task.FromResult((classes.Find(x => x.IdClass == id)).students);
         }
-        public void CreateClassAsync(Class clas)
+        public async Task<Class> CreateClassAsync(Class clas)
         {
             classes.Add(clas);
+            return await Task.FromResult(clas);
         }
-        public void UpdateClassAsync(Class clas)
+        public async Task<Class> UpdateClassAsync(int id, Class clas)
         {
-            classes.RemoveAll(x => x.IdClass == clas.IdClass);
-            classes.Add(clas);
+            var clase = classes.FirstOrDefault(x => x.IdClass == id);
+            clase.Title = clas.Title ?? clase.Title;
+            clase.Description = clas.Description ?? clase.Description;
+            return await Task.FromResult(clase);
+
         }
         public void DeleteClassAsync(int id)
         {
